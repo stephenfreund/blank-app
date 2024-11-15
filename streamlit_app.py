@@ -7,5 +7,5 @@ st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
 
-with TemporaryFile() as f:
-    f.write("Boop")
+with TemporaryFile(mode="w") as f:
+    f.write("beep")
