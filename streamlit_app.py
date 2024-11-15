@@ -13,4 +13,4 @@ with TemporaryFile(mode="w") as f:
     f.write("borp")
 
 
-    logging.log(5, "Boop")
+    logging.info("Boop")
