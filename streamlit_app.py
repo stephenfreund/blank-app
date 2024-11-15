@@ -8,7 +8,7 @@ st.write(
 )
 
 with TemporaryFile(mode="w") as f:
-    print(f)
+    st.write(f)
     f.write("borp")
 
 
