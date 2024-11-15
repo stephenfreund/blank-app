@@ -1,6 +1,6 @@
 from tempfile import TemporaryFile
 import streamlit as st
-
+import logging
 
 st.title("🎈 My new app")
 st.write(
@@ -13,3 +13,4 @@ with TemporaryFile(mode="w") as f:
     f.write("borp")
 
 
+    logging.log(5, "Boop")
