@@ -1,6 +1,7 @@
 from tempfile import TemporaryFile
 import streamlit as st
 import logging
+import sys
 
 st.title("🎈 My new app")
 st.write(
