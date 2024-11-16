@@ -20,15 +20,15 @@ with TemporaryFile(mode="w") as f:
     # log.setLevel(logging.INFO)
     # log.info("Page loaded")
 
-    logger = logging.getLogger()
+    logger = logging.getLogger("streamlit")
     level = logging.INFO
 
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(message)s',
-        # handlers=[
-        #     logging.StreamHandler(sys.stdout)  # Logs will be output to stderr
-        # ]
-    )
+    # logging.basicConfig(
+    #     level=logging.INFO,
+    #     format='%(message)s',
+    #     handlers=[
+    #         logging.StreamHandler(sys.stdout)  # Logs will be output to stderr
+    #     ]
+    # )
 
     logger.log(level, "MOO")
