@@ -12,9 +12,22 @@ with TemporaryFile(mode="w") as f:
     print(f)
     f.write("borp")
 
-    log = logging.getLogger("Flowco")
+    # log = logging.getLogger("Flowco")
 
 
-    st.write("Some text of page")
-    log.setLevel(logging.INFO)
-    log.info("Page loaded")
+    # st.write("Some text of page")
+    # log.setLevel(logging.INFO)
+    # log.info("Page loaded")
+
+    logger = logging.getLogger(__name__)
+    level = logging.INFO
+
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(message)s',
+        # handlers=[
+        #     logging.StreamHandler(sys.stdout)  # Logs will be output to stderr
+        # ]
+    )
+
+    logger.log(level, "MOO")
