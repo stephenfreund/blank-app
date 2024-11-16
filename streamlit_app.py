@@ -20,17 +20,15 @@ with TemporaryFile(mode="w") as f:
     # log.setLevel(logging.INFO)
     # log.info("Page loaded")
 
-    logger = logging.getLogger("streamlit")
+    logger = st._logger.get_logger("Flowco")
     level = logging.INFO
 
-    handler = logging.StreamHandler()
-
-    # Define a custom formatter
-    formatter = logging.Formatter(
-        fmt='%(message)s'
-    )
-
-    # Set the formatter to the handler
-    handler.setFormatter(formatter)
+    # logging.basicConfig(
+    #     level=logging.INFO,
+    #     format='%(message)s',
+    #     handlers=[
+    #         logging.StreamHandler(sys.stdout)  # Logs will be output to stderr
+    #     ]
+    # )
 
     logger.log(level, "MOO")
