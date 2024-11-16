@@ -15,5 +15,5 @@ with TemporaryFile(mode="w") as f:
     log = logging.getLogger("streamlit")
 
     st.write("Some text of page")
-
+    log.setLevel(logging.INFO)
     log.info("Page loaded")
