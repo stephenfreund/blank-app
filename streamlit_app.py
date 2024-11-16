@@ -11,4 +11,11 @@ with TemporaryFile(mode="w") as f:
     st.write(f)
     print(f)
     f.write("borp")
-    logging.info("Boop")
+    import streamlit as st
+    import logging
+
+    log = logging.getLogger("streamlit")
+
+    st.write("Some text of page")
+
+    log.info("Page loaded")
