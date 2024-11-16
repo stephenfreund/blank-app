@@ -11,8 +11,6 @@ with TemporaryFile(mode="w") as f:
     st.write(f)
     print(f)
     f.write("borp")
-    import streamlit as st
-    import logging
 
     log = logging.getLogger("streamlit")
 
