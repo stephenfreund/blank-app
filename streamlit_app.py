@@ -12,7 +12,7 @@ with TemporaryFile(mode="w") as f:
     print(f)
     f.write("borp")
 
-    log = logging.getLogger("streamlit")
+    log = logging.getLogger("my_app")
 
     st.write("Some text of page")
     log.setLevel(logging.INFO)
