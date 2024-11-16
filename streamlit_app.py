@@ -13,6 +13,9 @@ with TemporaryFile(mode="w") as f:
     f.write("borp")
 
     log = logging.getLogger("my_app")
+    FORMAT = '%(asctime)s %(message)s'
+    logging.basicConfig(format=FORMAT)
+
 
     st.write("Some text of page")
     log.setLevel(logging.INFO)
