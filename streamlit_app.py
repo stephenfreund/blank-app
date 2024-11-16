@@ -12,9 +12,7 @@ with TemporaryFile(mode="w") as f:
     print(f)
     f.write("borp")
 
-    log = logging.getLogger("my_app")
-    FORMAT = '%(asctime)s %(message)s'
-    logging.basicConfig(format=FORMAT)
+    log = logging.getLogger("Flowco")
 
 
     st.write("Some text of page")
