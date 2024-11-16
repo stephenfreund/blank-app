@@ -23,12 +23,14 @@ with TemporaryFile(mode="w") as f:
     logger = logging.getLogger("streamlit")
     level = logging.INFO
 
-    # logging.basicConfig(
-    #     level=logging.INFO,
-    #     format='%(message)s',
-    #     handlers=[
-    #         logging.StreamHandler(sys.stdout)  # Logs will be output to stderr
-    #     ]
-    # )
+    handler = logging.StreamHandler()
+
+    # Define a custom formatter
+    formatter = logging.Formatter(
+        fmt='%(message)s'
+    )
+
+    # Set the formatter to the handler
+    handler.setFormatter(formatter)
 
     logger.log(level, "MOO")
