@@ -25,9 +25,9 @@ with TemporaryFile(mode="w") as f:
     logging.basicConfig(
         level=logging.INFO,
         format='%(message)s',
-        # handlers=[
-        #     logging.StreamHandler(sys.stdout)  # Logs will be output to stderr
-        # ]
+        handlers=[
+            logging.StreamHandler(sys.stdout)  # Logs will be output to stderr
+        ]
     )
 
     logger.log(level, "MOO")
