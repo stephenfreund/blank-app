@@ -16,4 +16,4 @@ with TemporaryFile(mode="w") as f:
 
     st.write("Some text of page")
 
-    log.error("Page loaded")
+    log.info("Page loaded")
